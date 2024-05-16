@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { HeaderComponent } from './component/header/header.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardModule } from 'primeng/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,9 @@ import { HeaderComponent } from './component/header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    BrowserAnimationsModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

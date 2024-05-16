@@ -1,0 +1,17 @@
+.dash-container{
+    .dash-cal{
+        box-shadow: 1px 1px 5px #00000054;
+        margin-left: 10px;
+        width: 130px;
+    }
+    .dash-card{
+        .p-card{
+            box-shadow: 1px 1px 5px #00000054;
+            padding: 10px;
+            .p-card-title{
+                font-size: 20px !important;
+                font-weight: 600;
+            }
+        }
+    }
+}

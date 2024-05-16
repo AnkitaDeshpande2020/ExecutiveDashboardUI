@@ -1,0 +1,36 @@
+<div class="custom-div" [ngSwitch]="cardType">
+    <div *ngSwitchCase="'data'" class="text-center">
+        <!-- Display content for 'data' case -->
+       <p class="custom-value mb-0">{{dataToDisplay?.value}}</p>
+       <p class="custom-percentage mb-0">
+        <span class="custom-arrow"> &#x2191;</span>
+        {{dataToDisplay?.percentage}} %
+        </p>
+       <p class="custom-label mb-3">{{dataToDisplay?.displaylabel}}</p>
+    </div>
+    <div *ngSwitchCase="'pieGraph'">
+       <highcharts-chart [Highcharts]="highcharts" [options]="options" [constructorType]="constructorType"
+        [callbackFunction]="callbackFunction" [style.height]="height" [oneToOne]="true"
+        [runOutsideAngular]="true" [(update)]="updateFlag" style="display: block;">
+
+       </highcharts-chart>
+    </div>
+    <div *ngSwitchCase="'bubbleGraph'">
+        <highcharts-chart [Highcharts]="highcharts" [options]="options" [constructorType]="constructorType"
+         [callbackFunction]="callbackFunction" [style.height]="height" [oneToOne]="true"
+         [runOutsideAngular]="true" [(update)]="updateFlag" style="display: block;">
+ 
+        </highcharts-chart>
+     </div>
+     <div *ngSwitchCase="'columnGroupGraph'">
+        <highcharts-chart [Highcharts]="highcharts" [options]="options" [constructorType]="constructorType"
+         [callbackFunction]="callbackFunction" [style.height]="height" [oneToOne]="true"
+         [runOutsideAngular]="true" [(update)]="updateFlag" style="display: block;">
+ 
+        </highcharts-chart>
+     </div>
+    <div *ngSwitchDefault>
+        <!-- Default content if cardType doesn't match any case -->
+      
+    </div>
+</div>
